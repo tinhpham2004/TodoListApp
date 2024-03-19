@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:todo_list_app/app.dart';
 import 'package:todo_list_app/database.dart';
 import 'package:todo_list_app/firebase_options.dart';
-import 'package:todo_list_app/tasks_controller.dart';
+import 'package:todo_list_app/controllers/tasks_controller.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

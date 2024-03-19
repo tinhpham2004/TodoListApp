@@ -4,11 +4,11 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-import 'package:todo_list_app/cancel_button.dart';
+import 'package:todo_list_app/widgets/cancel_button.dart';
 import 'package:todo_list_app/database.dart';
 import 'package:todo_list_app/model/task.dart';
-import 'package:todo_list_app/task_data_source.dart';
-import 'package:todo_list_app/tasks_controller.dart';
+import 'package:todo_list_app/widgets/task_data_source.dart';
+import 'package:todo_list_app/controllers/tasks_controller.dart';
 import 'package:todo_list_app/values/colors.dart';
 
 class HomePage extends StatefulWidget {
@@ -21,7 +21,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final tasksController = Get.find<TasksController>();
 
   void orderByTime() {
     tasksController.tasks.sort(((a, b) => b.time.compareTo(a.time)));
@@ -35,8 +34,8 @@ class _HomePageState extends State<HomePage> {
         TaskDataSource(tasks: tasksController.tasks);
   }
 
+  final tasksController = Get.find<TasksController>();
   final database = Database();
-
   final addTaskController = TextEditingController();
   final updateTaskController = TextEditingController();
 
