@@ -38,6 +38,7 @@ dependencies:
   flutter_screenutil: ^5.9.0
   cloud_firestore: ^4.13.6
   get: ^4.6.6
+  syncfusion_flutter_datagrid: ^23.2.7
 
 dev_dependencies:
   flutter_test:
